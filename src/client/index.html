@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OldBox</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/hamburger.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-2" id="menu-2">
+            <div class="st-menu-content">
+                <h1 class="header-h1">Places</h1>
+
+                <div class="categories-container">
+                    <div class="category city-walking">
+                        <a href="#" onclick="changePlaylist('City')">
+                            <figure>
+                                <img src="./images/city-walking.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">City &</div>
+                                <div class="line-ctn title-offset">Landscape</div>
+                            </h2>
+                        </a>
+                    </div>
+                    <div class="category driving"><a href="#" onclick="changePlaylist('Drive')">
+                            <figure>
+                                <img src="./images/driving.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">Drive &</div>
+                                <div class="line-ctn title-offset">Commute</div>
+                            </h2>
+                        </a></div>
+                    <div class="category flight"><a href="#" onclick="changePlaylist('Clouds')">
+                            <figure>
+                                <img src="./images/flight.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">Over the</div>
+                                <div class="line-ctn title-offset">Clouds</div>
+                            </h2>
+                        </a></div>
+                    <div class="category hill-climbing"><a href="#" onclick="changePlaylist('Hills')">
+                            <figure>
+                                <img src="./images/hill-climbing.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">Hills &</div>
+                                <div class="line-ctn title-offset">Mountains</div>
+                            </h2>
+                        </a></div>
+                    <div class="category space"><a href="#" onclick="changePlaylist('Space')">
+                            <figure>
+                                <img src="./images/space.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">Space &</div>
+                                <div class="line-ctn title-offset">Stars</div>
+                            </h2>
+                        </a></div>
+                    <div class="category beach-walking"><a href="#" onclick="changePlaylist('Beach')">
+                            <figure>
+                                <img src="./images/walking-in-sand.jpg" class="tile-image" />
+                            </figure>
+                            <h2>
+                                <div class="line-ctn">Beach &</div>
+                                <div class="line-ctn title-offset">The Ocean</div>
+                            </h2>
+                        </a></div>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- content push wrapper -->
+        <div class="st-pusher">
+            <div class="overlay"></div>
+            <div id="player">
+            </div>
+
+            <div class="st-content">
+                <div id="st-trigger-effects" class="column">
+                    <button class="hamburger hamburger--spring" type="button" data-effect="st-effect-2">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="st-content-inner" style="width: 100%; height: 100%; display: flex;">
+                    <h1>What's your next
+                        <span class="title-offset">Destination?</span>
+                    </h1>
+                    <div class="controls">
+                        <button id="prev-btn"><span class="material-icons">
+                                skip_previous
+                            </span></button>
+                        <button id="play-btn"><span class="material-icons">
+                                play_arrow
+                            </span></button>
+                        <button id="next-btn"><span class="material-icons">
+                                skip_next
+                            </span></button>
+                        <div class='bsp-volume-wrap'>
+                            <button id='bsp-volume'>
+                                <span class="material-icons">
+                                    volume_up
+                                </span>
+                            </button>
+                            <div class='bsp-volume-panel'>
+                                <div class='bsp-volume-slider'>
+                                    <div class='bsp-volume-slider-track'>
+                                        <div class='bsp-volume-slider-progress'>
+                                            <div class='bsp-volume-slider-handle'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("is-active");
+        });
+    </script>
+    <script src="./js/classie.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

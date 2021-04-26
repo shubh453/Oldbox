@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": false,
+      "sourceMap": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "declaration": true,
+      "target": "es6",
+      "lib": ["es2016", "dom"],
+      "outDir": "./dist",
+      "noUnusedLocals": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noUnusedParameters": false,
+      "pretty": true,
+      "noFallthroughCasesInSwitch": true,
+      "allowUnreachableCode": false,
+      "strict": true,
+      "resolveJsonModule" : true
+    },
+    "files": [
+      "./node_modules/@types/express/index.d.ts",
+      "./node_modules/@types/socket.io/index.d.ts",
+    ],
+    "include": [
+      "src/**/*.ts",
+      "./node_modules/@types/express/index.d.ts",
+      "./node_modules/@types/socket.io/index.d.ts",
+      "./node_modules/@types/node/index.d.ts",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
